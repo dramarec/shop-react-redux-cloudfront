@@ -11,5 +11,5 @@ Serverless Finch
 ```
    npm i serverless-finch
    serverless create --template aws-nodejs --path ./sl
-   
+    yarn cloudfront:update:build:deploy
 ```

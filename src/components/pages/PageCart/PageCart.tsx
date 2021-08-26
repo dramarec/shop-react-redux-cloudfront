@@ -106,6 +106,7 @@ export default function PageCart() {
   const classes = useStyles();
   const [activeStep, setActiveStep] = React.useState<number>(0);
   const cartItems = useSelector(selectCartItems);
+  console.log("🔥🚀 ===> PageCart ===> cartItems", cartItems);
   const isCartEmpty = !cartItems.length;
   const [address, setAddress] = useState<FormikValues>(initialAddressValues);
   const [isFormValid, setIsFormValid] = useState<boolean>(false);
