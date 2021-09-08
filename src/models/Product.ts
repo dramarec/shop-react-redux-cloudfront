@@ -2,12 +2,13 @@ import * as Yup from 'yup';
 
 export type Product = {
   id: string
-  name: string
+  title: string
   description: string
   image: string
   price: number
   favorite: boolean
   ingredients: string[]
+  count: number
 };
 export interface IProductProduct {
   product: IProducts
