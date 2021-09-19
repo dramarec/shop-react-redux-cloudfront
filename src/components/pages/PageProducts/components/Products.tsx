@@ -70,7 +70,7 @@ export default function Products({ products, handleClickOpenModal, toggleFavorit
             </CardActionArea>
             <CardContent className={classes.cardContent}>
               <Typography gutterBottom variant="h5" component="h2">
-                {product.name}
+                {product.title}
               </Typography>
 
               <Typography className={classes.price}>

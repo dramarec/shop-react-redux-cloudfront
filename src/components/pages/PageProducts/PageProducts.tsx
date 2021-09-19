@@ -7,7 +7,7 @@ import Products from "components/pages/PageProducts/components/Products";
 import API_PATHS from "constants/apiPaths";
 import { Product } from 'models/Product';
 import { ModalBlock } from './components/ModalBlock';
-import Ingredients from './components/Ingredients';
+// import Ingredients from './components/Ingredients';
 import { formatAsPrice } from 'utils/utils';
 
 const useStyles = makeStyles((theme) => ({
@@ -32,6 +32,7 @@ const useStyles = makeStyles((theme) => ({
     },
     productCard: {
         marginLeft: 'auto',
+        // marginRight: 'auto',
         width: 100,
         position: 'absolute',
         right: 30,
@@ -60,6 +61,7 @@ export default function PageProducts() {
         axios.get(API_PATHS.product)
             .then(res => {
                 setProducts(res.data.productList)
+                console.log("🔥🚀 ===> PageProducts ===> products", res.data);
             });
     }, [])
 
@@ -90,7 +92,7 @@ export default function PageProducts() {
                 <ModalBlock
                     onClose={handleCloseModal}
                     visible={visibleModal}
-                    title={prodModal.name}
+                    title={prodModal.title}
                     key={prodModal.id}
                     product={prodModal}
                     classes={classes}
@@ -107,7 +109,7 @@ export default function PageProducts() {
                             {prodModal.description}
                         </Typography>
 
-                        <Ingredients ingredients={prodModal.ingredients} />
+                        {/* <Ingredients ingredients={prodModal.ingredients} /> */}
 
                         <Typography>
                             {formatAsPrice(prodModal.price)}
