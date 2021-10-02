@@ -20,6 +20,7 @@ export default function PageProductImport() {
     <div className={classes.content}>
       <Box display="flex" alignItems="center">
         <CSVFileImport url={`${API_PATHS.import}/import`} title="Import Products CSV"/>
+        { console.log(`${API_PATHS.import}/import`) }
         <Button size="small" color="primary" variant="contained" component={Link} to={'/admin/product-form/'}>
           create product
         </Button>
